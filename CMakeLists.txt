@@ -8,7 +8,7 @@ project(RapidXML)
 
 set(CMAKE_CXX_STANDARD 11)
 
-option(RAPIDXML_BUILD_TESTS "Build tests as well" ON)
+option(RAPIDXML_BUILD_TESTS "Build tests as well" OFF)
 
 add_library(rapidxml INTERFACE)
 
@@ -20,3 +20,10 @@ if (RAPIDXML_BUILD_TESTS)
 	enable_testing()
 	add_subdirectory(tests)
 endif ()
+
+install(FILES rapidxml.hpp
+			  rapidxml_iterators.hpp
+			  rapidxml_print.hpp
+			  rapidxml_utils.hpp
+		DESTINATION rapidxml
+)
