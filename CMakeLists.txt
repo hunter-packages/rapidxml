@@ -25,5 +25,10 @@ install(FILES rapidxml.hpp
 			  rapidxml_iterators.hpp
 			  rapidxml_print.hpp
 			  rapidxml_utils.hpp
-		DESTINATION rapidxml
+		DESTINATION include/rapidxml
 )
+
+configure_file(cmake/RapidXMLConfig.cmake.in generated/RapidXMLConfig.cmake @ONLY)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/generated/RapidXMLConfig.cmake
+		DESTINATION lib/cmake/RapidXML)

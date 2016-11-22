@@ -1,0 +1,6 @@
+#
+#
+#
+
+set(RapidXML_DIR "@CMAKE_INSTALL_PREFIX@/include")
+message("-- RapidXML_DIR: ${RapidXML_DIR}")
