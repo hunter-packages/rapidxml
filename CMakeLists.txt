@@ -42,7 +42,7 @@ write_basic_package_version_file(
 configure_file("cmake/Config.cmake.in" "${project_config}" @ONLY)
 
 install(
-    TARGETS rapidxml
+    TARGETS RapidXML
     EXPORT "${targets_export_name}"
     INCLUDES DESTINATION "${include_install_dir}"
 )
