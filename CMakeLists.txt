@@ -10,11 +10,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 option(RAPIDXML_BUILD_TESTS "Build tests as well" OFF)
 
-add_library(rapidxml INTERFACE)
+add_library(RapidXML INTERFACE)
 
-target_include_directories(rapidxml INTERFACE
+target_include_directories(RapidXML INTERFACE
 	$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
-	$<INSTALL_INTERFACE:"">
+	$<INSTALL_INTERFACE:>
 )
 
 if (RAPIDXML_BUILD_TESTS)
