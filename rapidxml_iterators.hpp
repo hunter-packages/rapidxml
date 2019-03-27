@@ -248,7 +248,7 @@ namespace rapidxml
     };
 
     template <class Ch>
-    iterator_range<node_iterator<Ch>> nodes(const xml_node<Ch>* node,
+    iterator_range< node_iterator<Ch> > nodes(const xml_node<Ch>* node,
                                             const Ch* name = 0,
                                             std::size_t name_size = 0,
                                             bool case_sensitive = true)
@@ -266,11 +266,11 @@ namespace rapidxml
 
         node_iterator<Ch> begin(first, 0, flags);
         node_iterator<Ch> end(0, last, flags);
-        return iterator_range<node_iterator<Ch>>(begin, end);
+        return iterator_range< node_iterator<Ch> >(begin, end);
     }
 
     template <class Ch>
-    iterator_range<attribute_iterator<Ch>> attributes(const xml_node<Ch>* node,
+    iterator_range< attribute_iterator<Ch> > attributes(const xml_node<Ch>* node,
                                                       const Ch *name = 0,
                                                       std::size_t name_size = 0,
                                                       bool case_sensitive = true)
@@ -288,7 +288,7 @@ namespace rapidxml
 
         attribute_iterator<Ch> begin(first, 0, flags);
         attribute_iterator<Ch> end(0, last, flags);
-        return iterator_range<attribute_iterator<Ch>>(begin, end);
+        return iterator_range< attribute_iterator<Ch> >(begin, end);
     }
 }
 
